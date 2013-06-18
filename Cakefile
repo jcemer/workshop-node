@@ -1,8 +1,8 @@
 flour = require 'flour'
 
 task 'build', ->
-    compile 'style.styl', 'style.css'
+    compile 'styles/main.styl', 'styles/main.css'
 
 task 'watch', ->
     invoke 'build'
-    watch 'style.styl', -> invoke 'build'
+    watch 'styles/*', -> invoke 'build'
