@@ -1,11 +1,20 @@
-# Install dependencies: npm install .
-# Build the website locally: docpad generate
-# Go to the gh-pages branch: git checkout gh-pages
-# Remove all files under version control: git rm -rf .
-# Move files from folder out to root: mv out/* .
-# Removing out folder: rm -rf out
-# Removing node_modules folder: rm -rf node_modules
-# Commit changes to gh-pages branch: git add . && git commit -m "Regenerate" && git push origin gh-pages
-# Goes back to master branch: git checkout master
+cd "$(dirname $0)"
 
-npm install . && cake build && git checkout gh-pages && rm .gitignore && rm -rf node_modules && git add . && git commit -m "Regenerate" && git push origin gh-pages && git checkout master && git reset --hard
+remote=${1-origin}
+branch=${2-gh-pages}
+
+$(git branch $branch)
+
+branch_sha=$(git show-ref -s refs/heads/$branch)
+echo "$branch last commit: $branch_sha"
+
+tree_sha=$(git ls-tree -d HEAD . | awk '{print $3}')
+echo ". tree id: $tree_sha"
+
+commit_sha=$(echo "Deploy" | git commit-tree $tree_sha -p $branch_sha)
+$(git update-ref refs/heads/$branch $commit_sha)
+echo "$branch HEAD updated to $commit_sha"
+
+echo -e "\n\nPushing to $remote..."
+$(git push $remote $branch)
+exit
