@@ -1,4 +1,4 @@
 Workshop de Node
 ============
 
-http://desorientados.com.br/workshop-node
+http://workshop-node.desorientados.com.br/
