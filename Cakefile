@@ -9,18 +9,16 @@ task 'watch', ->
     watch 'styles/*', -> invoke 'build'
 
 task 'deploy', ->
-    cp.exec """
-        npm install
-        cake build
-        git stash
-        git checkout gh-pages
-        git rebase master
-        git add .
-        git commit -m "Regenerate"
-        git push fork gh-pages
-        git checkout master
+    child = cp.exec """
+        git stash &&
+        git checkout gh-pages &&
+        git merge master &&
+        cake build &&
+        git add . &&
+        git commit --allow-empty -m "Regenerate" &&
+        git push -f origin gh-pages &&
+        git checkout master &&
         git stash pop
-    """.split(/\n/).join(' && '), (err, stdout, stderr) ->
-        console.error err if err
-        console.log stdout
-        console.log stderr
+    """
+    child.stdout.pipe process.stdout
+    child.stderr.pipe process.stderr
