@@ -113,7 +113,7 @@
                             <a class="github" href="http://github.com/ricardobeat" target="_blank">github</a>
                         </div>
                     </header>
-                    <p>Ricardo desenvolve produtos e interfaces para a web, e trabalha com node.js desde 2010. É criador do app Creek.io, autor de ferramentas como <a href="http://ryejs.com">Rye</a> e <a href="http://github.com/ricardobeat/cake-flour">Flour</a>, além de contribuir no core team do projeto <a href="http://tryghost.com">Ghost</a>.</p>
+                    <p>Ricardo desenvolve produtos e interfaces para a web, e trabalha com node.js desde 2010. É criador do app Creek.io, autor de ferramentas como <a href="http://ryejs.com" target="_blank">Rye</a> e <a href="http://github.com/ricardobeat/cake-flour" target="_blank">Flour</a>, além de contribuir no core team do projeto <a href="http://tryghost.com" target="_blank">Ghost</a>.</p>
                 </div>
             </section>
 
@@ -135,5 +135,11 @@
         <p>Ok, não perca mais tempo<br>Increva-se agora!</p>
         <a href="http://even.tc/workshop-node-js" class="subscribe" target="_blank">Inscreva-se</a>
     </div>
+    <script>
+    document.body.addEventListener('click', function(e){
+        if (e.target.tagName.toLowerCase() !== 'a' || !e.target.href) return
+        _gaq.push(['_trackEvent', 'Outbound Links' , e.target.href])
+    }, false)
+    </script>
 </body>
 </html>
