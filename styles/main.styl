@@ -2,7 +2,9 @@
 @import 'normalize'
 
 $background-color = #68C3BC
-$accent-color = #FE3C1A
+$accent-color = #FE5C5A
+$text-color = #344638
+$title-color = #455260
 
 * {
     box-sizing: border-box
@@ -13,10 +15,10 @@ html {
 }
 
 body {
-    font: 200 1.2em "Lato", sans-serif
+    font: 400 1em "Lato", sans-serif
     background: url("../images/bg.png")
     min-height: 100%
-    color: #666
+    color: $text-color
 }
 
 
@@ -62,13 +64,21 @@ body {
     margin: auto
     background: white
     box-shadow: 0 0 10px rgba(black, .05)
+    .title, .subtitle {
+        color: $title-color
+        line-height: 1.2
+    }
     .title {
-        font-size: 1.5em
-        color: #2A8370
+        font-size: 2.25em
+        font-weight: 300
+        margin-bottom: 0.5em
+        padding: 0.5em 0
+        border-bottom: 2px dotted $text-color + 80%
     }
     .subtitle {
-        font-size: 1.2em
-        margin-top: .25em       
+        font-size: 1.625em
+        font-weight: 400
+        margin-bottom: 0.25em
     }
     section {
         padding-top: 1em
@@ -81,7 +91,7 @@ body {
 .bar {
     overflow: hidden
     font-size: 1.25em
-    margin-bottom: 1em
+    padding-bottom: 1em
     .date, .investment, .subscribe {
         width: 33%
         float: left
@@ -107,8 +117,10 @@ body {
     border-radius: 4px
     padding: .5em 1em
     text-decoration: none
-    text-shadow: 2px 2px 2px rgba(black, .1)
+    text-shadow: -1px -1px 0 rgba(black, .2)
+    border: 1px solid ($accent-color - 25%)
     border-bottom: 3px solid ($accent-color - 20%)
+    box-shadow: 0 2px 5px rgba(black, 0.2)
     &:hover {
         background: $accent-color + 10%
     }
