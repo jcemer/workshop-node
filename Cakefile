@@ -9,16 +9,19 @@ task 'watch', ->
     watch 'styles/*', -> invoke 'build'
 
 task 'deploy', ->
-    child = cp.exec """
-        git stash &&
-        git checkout gh-pages &&
-        git merge master &&
-        cake build &&
-        git add . &&
-        git commit --allow-empty -m "Regenerate" &&
-        git push -f origin gh-pages &&
-        git checkout master &&
-        git stash pop
-    """
-    child.stdout.pipe process.stdout
-    child.stderr.pipe process.stderr
+    cp.exec "git status", (err, stdout) ->
+        unless stdout.indexOf("nothing to commit") >= 0
+            console.error "Please stash or commit your changes before deploy."
+            return
+
+        child = cp.exec """
+            git checkout gh-pages &&
+            git merge master &&
+            cake build &&
+            git add . &&
+            git commit --allow-empty -m "Regenerate" &&
+            git push -f origin gh-pages &&
+            git checkout master
+        """
+        child.stdout.pipe process.stdout
+        child.stderr.pipe process.stderr
