@@ -2,7 +2,7 @@
 @import 'normalize'
 
 $background-color = #68C3BC
-$accent-color = #FF6B6B
+$accent-color = #FE3C1A
 
 * {
     box-sizing: border-box
@@ -13,14 +13,15 @@ html {
 }
 
 body {
-    font: 200 1.5em "Lato", sans-serif
+    font: 200 1.2em "Lato", sans-serif
     background: url("../images/bg.png")
     min-height: 100%
     color: #666
 }
 
 
-
+// Header
+// -----------
 .header {
     text-align: center
     background: $background-color url(../images/nebula.jpg) center center
@@ -33,62 +34,67 @@ body {
         margin: 0
     }
     .title {
-        font: 900 3em/1.2 "Lato", sans-serif
+        font: 900 4em/1.2 "Lato", sans-serif
         letter-spacing: -.04em
         margin: 0
         color: rgba(white, .95)
         text-shadow: 2px 2px 0px rgba(black, .15)
     }
-}
-
-.subtitle {
-    font: 400 1.625 "Lato", sans-serif
-}
-
-.subtitle {
-    color: $background-color
-    a {
-        color: white
-        text-shadow: none
-        text-decoration: none
-        &:hover {
-            text-decoration: underline
+    .subtitle {
+        font: 400 1.25em "Lato", sans-serif
+        color: $background-color
+        a {
+            color: white
+            text-shadow: none
+            text-decoration: none
+            &:hover {
+                text-decoration: underline
+            }
         }
     }
 }
 
+// Content
+// -----------
 .content {
-    max-width: 700px
+    max-width: 760px
     padding: 50px
     margin: auto
     background: white
-    *:first-child, *:last-child {
-        margin: 0
-    }
     box-shadow: 0 0 10px rgba(black, .05)
+    .title {
+        font-size: 1.5em
+        color: #2A8370
+    }
+    .subtitle {
+        font-size: 1.2em
+        margin-top: .25em       
+    }
+    section {
+        padding-top: 1em
+    }
 }
 
+// Bar
+// -----------
 .bar {
     overflow: hidden
-    margin-bottom: 5em
-}
-
-.date, .local, .subscribe {
-    width: 33%
-    float: left
-}
-
-.time, .local-title {
-    color: #999
-    font-size: .75em
-    display: block
-}
-
-.local-title {
-    visibility: hidden
+    font-size: 1.25em
+    margin-bottom: 1em
+    .date, .investment, .subscribe {
+        width: 33%
+        float: left
+    }
+    .time, .batch {
+        color: #999
+        font-size: .75em
+        display: block
+    }
 }
 
 
+// Subscribe
+// -----------
 .subscribe {
     background: $accent-color
     text-align: center
@@ -105,5 +111,27 @@ body {
     &:active {
         border-bottom-width: 2px
         margin-top: 1px
+    }
+}
+
+// Speaker
+// -----------
+.speaker {
+    width: 60%
+    + .speaker {
+        margin-top: 2em
+    }
+    .subtitle {
+        // display: inline-block
+        // line-height: 1
+        margin-bottom: -.2em
+    }
+    .photo {
+        border-radius: 50%
+        float: left
+        margin-right: .4em
+    }
+    header {
+
     }
 }
