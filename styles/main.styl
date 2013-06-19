@@ -14,21 +14,23 @@ html {
 
 body {
     font: 200 1.2em "Lato", sans-serif
-    background: url("../images/bg.png")
+    background: $background-color url(../images/nebula.jpg) center top 
+    background-attachment: fixed
+    background-size: cover
     min-height: 100%
     color: #666
 }
 
+.wrapper {
+    background: url("../images/bg.png")
+    padding: 1px
+}
 
 // Header
 // -----------
 .header {
     text-align: center
-    background: $background-color url(../images/nebula.jpg) center top 
-    background-attachment: fixed
-    background-size: cover
     padding: 4em 0 6em 0
-    margin-bottom: -2em
     box-shadow: inset 0 -2px 10px rgba(black, .02)
     p {
         margin: 0
@@ -59,9 +61,10 @@ body {
 .content {
     max-width: 760px
     padding: 50px
-    margin: auto
+    margin: -50px auto
     background: white
-    box-shadow: 0 0 10px rgba(black, .05)
+    box-shadow: 0 0 10px rgba(black, .1)
+    border-radius: 3px
     .title {
         font-size: 1.5em
         color: #2A8370
@@ -71,7 +74,7 @@ body {
         margin-top: .25em       
     }
     section {
-        padding-top: 1em
+        padding-top: 1.5em
         overflow: hidden
     }
 }
@@ -82,17 +85,22 @@ body {
     overflow: hidden
     font-size: 1.25em
     margin-bottom: 1em
-    .date, .investment, .subscribe {
+    .box {
         width: 33%
         float: left
     }
-    .time, .batch {
+    .subscribe {
+        display: block
+    }
+    .time, .batch, .braziljs {
         color: #999
         font-size: .75em
         display: block
     }
-    .batch {
-        visibility: hidden
+    .braziljs {
+        margin-top: .4em
+        font-size: .6em
+        float: right
     }
 }
 
@@ -103,9 +111,9 @@ body {
     background: $accent-color
     text-align: center
     color: white
-    float: left
+    display: inline-block
     border-radius: 4px
-    padding: .5em 1em
+    padding: .6em 1em
     text-decoration: none
     text-shadow: 2px 2px 2px rgba(black, .1)
     border-bottom: 3px solid ($accent-color - 20%)
@@ -134,13 +142,24 @@ body {
         float: left
         margin-right: .4em
     }
-    header {
-
-    }
 }
 
 // Map
 // -----------
 .map {
     width: 100%
+}
+
+// Tail
+// -----------
+.tail {
+    text-align: center
+    padding: 200px 0 150px 0
+    color: white
+    font-size: 1.5em
+    p {
+        font-size: 1.25em
+        font-style: italic
+        text-shadow: 2px 2px 0px rgba(black, .15)
+    }
 }
