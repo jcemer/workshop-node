@@ -27,17 +27,89 @@
 </head>
 <body>
     <header class="header">
-        <img src="images/rocket.png" width="60" />
+        <img src="images/rocket.png" width="50" />
         <h1 class="title">Workshop node.js</h1>
         <p class="subtitle">
             com <a href="http://github.com/ricardobeat">@ricardobeat</a>
             e <a href="http://github.com/jcemer">@jcemer</a>
         </p>
+        <p class="date">21/08 - Porto Alegre</p>
     </header>
 
     <div class="wrapper">
         <div class="content">
-            <div class="bar">
+
+            <section class="intro">
+                <h1 class="title">Crie aplicações web com node.js</h1>
+                <p>Neste workshop de curta duração você vai aprender rapidamente a desenvolver aplicações utilizando node.js, uma plataforma para aplicações de rede altamente escaláveis. Vamos abordar desde o básico até conceitos avançados como streams, bibliotecas de controle de fluxo, e criação de servers utilizando HTTP e websockets de maneira <strong>totalmente prática</strong>.</p>
+                <p>Não é necessário ter experiência prévia com node.js, mas bons conhecimentos de javascript são necessários. Se você quer entender melhor os fundamentos de programação assíncrona e como utilizá-los para criar <strong>aplicações web mais eficientes e real-time</strong>, este curso é para você.</p>
+                <p>O workshop é presencial com duração de aproximadamente 2h30. A turma tem até 30 alunos, num espaço muito legal, amplo e confortável com guloseimas e café à vontade!</p>
+            </section>
+
+            <section>
+                <h1 class="title">Conteúdo</h1>
+                <ol class="workshop-content">
+                    <li>
+                        <h2 class="subtitle">Por que Node.js?</h2>
+                        <ul>
+                            <li>Javascript no servidor</li>
+                            <li>A engine V8</li>
+                            <li>Node vs outras plataformas</li>
+                            <li>O event loop</li>
+                            <li>I/O assíncrono</li>
+                            <li>Concorrência e escalabilidade</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2 class="subtitle">Sistema de módulos</h2>
+                        <ul>
+                            <li>Introdução ao NPM</li>
+                            <li>Instalando módulos e dependências</li>
+                            <li>Organização de código</li>
+                            <li>Criando e publicando módulos</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2 class="subtitle">Callbacks, Eventos & Streams</h2>
+                        <ul>
+                            <li>Assincronismo</li>
+                            <li>Event Emitters</li>
+                            <li>Streams</li>
+                            <li>API e módulos nativos</li>
+                            <li>Controle de fluxo</li>
+                            <li>Performance</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2 class="subtitle">Construindo uma aplicação</h2>
+                        <ul>
+                            <li>HTTP</li>
+                            <li>Express.js</li>
+                            <li>Routes</li>
+                            <li>Exibindo templates</li>
+                            <li>WebSockets</li>
+                            <li>Socket.io</li>
+                            <li>Eventos em tempo real</li>
+                            <li>Backbone e outros frameworks</li>
+                            <li>Bancos de dados & NoSQL</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2 class="subtitle">Build & Deploy</h2>
+                        <ul>
+                            <li>Preparando assets com Flour</li>
+                            <li>Grunt</li>
+                            <li>Deploy SaaS e VPS</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2 class="subtitle">+ Guest talk</h2>
+                        <p>Nosso convidado especial vai apresentar aplicações da tecnologia no mercado e sua experiência com a plataforma em um ambiente de produção.</p>
+                    </li>
+                </ol>
+            </section>
+
+            <div class="register">
                 <div class="box">
                     <span class="time">19:30h às 22h30</span>
                     <span class="day">21 de agosto*</span>
@@ -47,57 +119,16 @@
                     <span class="price">R$ 50,00</span>
                 </div>
                 <div class="box">
-                    <a href="http://even.tc/workshop-node-js" class="subscribe" target="_blank">Inscreva-se</a>
+                    <a href="http://even.tc/workshop-node-js" class="subscribe" target="_blank">Inscreva-se!</a>
                     <span class="braziljs">*véspera do BrazilJS</span>
                 </div>
             </div>
 
-            <section class="intro">
-                <p>Neste workshop você vai aprender a desenvolver aplicações utilizando node.js, uma plataforma para aplicações de rede altamente escaláveis. Começando pelo básico, desde instalação a como utilizar o NPM e o sistema de módulos, até conceitos avançados como streams, bibliotecas de controle de fluxo, e criação de servers utilizando HTTP e websockets.</p>
-                <p>Não é necessário ter experiência prévia com node.js, mas bons conhecimentos de javascript são necessários. Se você quer entender melhor os fundamentos de programação assíncrona e como utilizá-los para criar aplicações web mais eficientes, este curso é para você!</p>
-            </section>
-
             <section>
-                <h1 class="title">O que você vai aprender</h1>
-                <ol>
-                    <li>
-                        <h2 class="subtitle">Introdução</h2>
-                        <p>Conheça as peculiariedades do Javascript no servidor, o engine V8 e seu papel no Node.js.</p>
-                    </li>
-                    <li>
-                        <h2 class="subtitle">Por que Node.js?</h2>
-                        <p>O Node.js introduz conceitos particulares de execução assíncrona. Você irá descobrir isto e muito mais e entender o porquê e quando usar Node.js.</p>
-                    </li>
-                    <li>
-                        <h2 class="subtitle">Sistema de módulos</h2>
-                        <p>Incorporando as melhores práticas de modularização, o NPM é o gerenciador de pacotes padrão do Node.js.</p>
-                        <p>Entenda o sistema de módulos, como organizar seu código e como distribuir seus próprios pacotes.</p>
-                    </li>
-                    <li>
-                        <h2 class="subtitle">Construindo uma aplicação</h2>
-                        <p>Aprenda a contruir uma aplicação HTTP simples e como evoluí-la para o framework Express.</p>
-                    </li>
-                    <li>
-                        <h2 class="subtitle">Streams</h2>
-                        <p>O conceito de <i>streams</i> é bastante presente e fundamental para as características de performance do Node.js.</p>
-                        <p>Entenda o que é, como aplicar em seu código e o quanto é importante manter seus dados em fluxo constante.</p>
-                    </li>
-                    <li>
-                        <h2 class="subtitle">Aplicações em tempo real</h2>
-                        <p>Aprenda a utilizar Websockets para transmitir dados em tempo real para navegadores.</p>
-                    </li>
-                    <li>
-                        <h2 class="subtitle">Guest talk</h2>
-                        <p>Convidado especial apresenta aplicações da tecnologia no mercado e sua experiência com a plataforma em um ambiente de produção.</p> 
-                    </li>
-                </ol>
-            </section>
-
-            <section>
-                <h1 class="title">É para você!</h1>
+                <h1 class="title">É para você</h1>
                 <p>O conteúdo deste workshop abrange do básico ao avançado da tecnologia por trás do <a href="http://nodejs.org/" target="_blank">Node.js</a>.</p>
-                <p>É imprescindível conhecimentos de programação e em especial o básico da linguagem Javascript. Aconselhamos a leitura do <a href="http://bonsaiden.github.io/JavaScript-Garden/" target="_blank">JavaScript Garden</a> para reforçar seus conhecimentos.</p>
-                <p>Você precisa apenas ir munido do seu entusiasmo, não necessário, porém não restritivo, que você traga seu laptop ou tablet.</p>
+                <p>É imprescindível ter conhecimentos de programação e em especial o básico da linguagem Javascript. Aconselhamos a leitura do <a href="http://bonsaiden.github.io/JavaScript-Garden/" target="_blank">JavaScript Garden</a> para reforçar seus conhecimentos.</p>
+                <p>Você precisa apenas ir munido do seu entusiasmo, mas se preferir trazer seu laptop ou tablet será bem-vindo. Teremos wi-fi e conexão de 100mbps no local.</p>
             </section>
 
             <section>
@@ -128,9 +159,11 @@
             </section>
 
             <section>
-                <h1 class="title">Local</h1>
-                <h2 class="subtitle">Nós Coworking</h2>
-                <p>
+                <h1 class="title">Data & Local</h1>
+                <p>O workshop acontece no dia <strong>21 de Agosto</strong>, véspera do BrazilJS, no <strong>Nós Coworking</strong>, um espaço de trabalho colaborativo localizado junto ao Shopping Total:</p>
+                <img src="images/nos-coworking.jpg" />
+                <p style="display: block; border:1px solid #eee; padding: 1em; max-width: 480px; border-radius: 6px; margin: 2em 0;">
+                    <strong>Nós Coworking</strong><br>
                     Shopping Total - Av. Cristóvão Colombo, 545<br>
                     Prédio 02 - 5˚ andar | Alameda dos Escritores<br>
                     Bairro Floresta | Porto Alegre - RS
