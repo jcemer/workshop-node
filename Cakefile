@@ -16,7 +16,7 @@ task 'deploy', ->
 
         child = cp.exec """
             git checkout gh-pages &&
-            git merge master &&
+            git merge -s recursive -X theirs master &&
             cake build &&
             git add . &&
             git commit --allow-empty -m "Regenerate" &&
